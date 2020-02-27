@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sela-Chat</title>
+   <script src="/socket.io/socket.io.js"></script>
+   <script src="./main.js"></script>
+   <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+   <h1>Sela-Chat</h1>
+   <div id="messages"></div>
+   <form onsubmit="return addMessage(this);">
+      <input type="text" id="nickname" placeholder="Nick" required>
+      <br><br>
+      <textarea id="text" cols="50" rows="2" spellcheck="true" role="textbox"
+      aria-autocomplete="none"
+      aria-multiline="true"
+      placeholder="Enviar mensaje..."
+      style="white-space: pre-wrap;"></textarea>
+      <input type="submit" onkeyup="return checkSubmit(event);" value="Enviar">
+   </form>
+</body>
+</html>
